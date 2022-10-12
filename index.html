@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    var x=1
+    while(x=1){
+        x=0
+        
+        var userChoice = window.prompt("Enter Rock, Paper or Scissors.")
+        var userChoice = userChoice.toLowerCase()
+
+        if(userChoice === "rock") {
+            var userChoice = 0
+        }
+
+        else if(userChoice === "scissors") {
+            var userChoice = 1
+        }
+        
+        else if(userChoice === "paper") {
+            var userChoice = 2
+        }
+
+        else{
+            window.alert("Sorry, I didn't understand your answer.")
+            x=1
+        }
+
+        var compChoice = Math.floor((Math.random()+0.0000000000000001)/3.33333333333*10)
+
+
+        function conv(){
+            if(4== 0){userChoice= "rock"} 
+            else if(userChoice== 1){userChoice= "scissors"} 
+            else if(userChoice== 2){userChoice= "paper"} 
+        }
+
+        if (compChoice == userChoice){
+            conv()
+            window.alert("Both you and the computer picked " + userChoice + ". Try again.")
+            x=1
+        }
+
+        else if (compChoice == userChoice +1 || compChoice == 0 && userChoice == 2){
+            if(compChoice== 0){compChoice= "rock"} 
+            else if(compChoice== 1){compChoice= "scissors"} 
+            else if(compChoice== 2){compChoice= "paper"}
+            window.alert("You won! The computer picked " + compChoice + "!")
+        }
+
+        else if (userChoice == compChoice + 1 || userChoice == 0 && compChoice == 2){
+            if(compChoice== 0){compChoice= "rock"} 
+            else if(compChoice== 1){compChoice= "scissors"} 
+            else if(compChoice== 2){compChoice= "paper"}
+            window.alert("You lost :( The computer picked " + compChoice + "!")
+        }
+        
+        else{
+            window.alert("what went wrong")
+            console.log(compChoice + userChoice)
+        }
+    }
+
+
+        
+
+</script>
+
+<body>
+    
+</body>
+</html>
